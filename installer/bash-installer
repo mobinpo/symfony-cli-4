@@ -162,10 +162,10 @@ latest_url=${CLI_DOWNLOAD_URL_PATTERN/~platform~/${platform}}
 output "  Downloading ${latest_url}...";
 case $downloader in
     "curl")
-        curl --fail --location "${latest_url}" > "/tmp/${CLI_TMP_NAME}.tar.gz"
+        curl --fail --location "${latest_url}" > "/tmp/${CLI_TMP_NAME}.gz"
         ;;
     "wget")
-        wget -q --show-progress "${latest_url}" -O "/tmp/${CLI_TMP_NAME}.tar.gz"
+        wget -q --show-progress "${latest_url}" -O "/tmp/${CLI_TMP_NAME}.gz"
         ;;
 esac
 
