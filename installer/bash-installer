@@ -176,8 +176,8 @@ if [ $? != 0 ]; then
 fi
 
 output "  Uncompress binary..."
-tar -xz --directory "/tmp" -f "/tmp/${CLI_TMP_NAME}.tar.gz"
-rm "/tmp/${CLI_TMP_NAME}.tar.gz"
+gzip -d "/tmp/${CLI_TMP_NAME}.gz"
+rm "/tmp/${CLI_TMP_NAME}.gz"
 
 if [ ! -d "${binary_dest}" ]; then
     if ! mkdir -p "${binary_dest}"; then
