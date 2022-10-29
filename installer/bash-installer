@@ -178,6 +178,9 @@ fi
 output "  Uncompress binary..."
 gzip -d "/tmp/${CLI_TMP_NAME}.gz"
 
+output "  Making the binary executable..."
+chmod 755 "/tmp/${CLI_TMP_NAME}"
+
 if [ ! -d "${binary_dest}" ]; then
     if ! mkdir -p "${binary_dest}"; then
         binary_dest="."
