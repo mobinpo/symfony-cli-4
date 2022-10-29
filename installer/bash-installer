@@ -18,11 +18,11 @@
 #
 set -euo pipefail
 
-CLI_CONFIG_DIR=".symfony5"
+CLI_CONFIG_DIR=".symfony"
 CLI_EXECUTABLE="symfony"
 CLI_TMP_NAME="$CLI_EXECUTABLE-"$(date +"%s")
 CLI_NAME="Symfony CLI"
-CLI_DOWNLOAD_URL_PATTERN="https://github.com/symfony-cli/symfony-cli/releases/latest/download/symfony-cli_~platform~.tar.gz"
+CLI_DOWNLOAD_URL_PATTERN="https://github.com/symfony/cli/releases/latest/download/symfony_~platform~.gz"
 
 function output {
     style_start=""
