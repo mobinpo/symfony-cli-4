@@ -177,7 +177,6 @@ fi
 
 output "  Uncompress binary..."
 gzip -d "/tmp/${CLI_TMP_NAME}.gz"
-rm "/tmp/${CLI_TMP_NAME}.gz"
 
 if [ ! -d "${binary_dest}" ]; then
     if ! mkdir -p "${binary_dest}"; then
