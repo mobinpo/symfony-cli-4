@@ -190,7 +190,7 @@ else
     output "  Installing the binary into your home directory..."
 fi
 
-if mv "/tmp/${CLI_EXECUTABLE}" "${binary_dest}/${CLI_EXECUTABLE}"; then
+if mv "/tmp/${CLI_TMP_NAME}" "${binary_dest}/${CLI_EXECUTABLE}"; then
     output "  The binary was saved to: ${binary_dest}/${CLI_EXECUTABLE}"
 else
     output "  Failed to move the binary to ${binary_dest}." "error"
